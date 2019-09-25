@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/rv_transparent_back"
+    android:gravity="top"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="#7000"
+    android:layout_height="match_parent">
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:id="@+id/rv_view_events_main"
+    tools:context=".Activities.ngo_view_all_events">
+
+
+    <LinearLayout
+        android:id="@+id/ll_toolbar_viewevents"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_backarrow"
+            android:layout_width="20dp"
+            android:tint="#666"
+            android:layout_height="20dp"></ImageView>
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_main_view_events"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <!--Extra Space-->
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"></LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_categories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:reverseLayout="false" />
+
+            <!--Extra Space-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title_viewevents"
+        android:paddingTop="30dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/event_background"
+            android:gravity="center"
+            android:elevation="10dp"
+            android:layout_margin="15dp"
+            android:layout_width="300dp"
+            android:layout_height="38dp">
+
+            <TextView
+                android:gravity="center"
+                android:text="View Events"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#F7941E"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_category"
+        android:layout_width="wrap_content"
+        android:scaleType="fitXY"
+        android:tint="@color/black"
+        app:borderWidth="0dp"
+        app:maxImageSize="25dp"
+        android:backgroundTint="#ddd"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:rippleColor="@color/white"
+        android:src="@drawable/ic_add"
+        style="@style/Widget.Design.FloatingActionButton"
+
+        android:layout_margin="15dp"/>
+
+    <include layout="@layout/transparent_dark"
+        android:visibility="gone"></include>
+
+    <include layout="@layout/event_donate_volunteer"
+        android:visibility="gone"></include>
+
+    <include layout="@layout/progress_dialog"
+        android:visibility="gone"></include>
+
+    <include layout="@layout/add_category_dialog"
+        android:visibility="gone"></include>
+
+    <include layout="@layout/edit_category_dialog"
+        android:visibility="gone"></include>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

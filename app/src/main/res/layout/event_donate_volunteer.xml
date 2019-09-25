@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:focusable="true"
+    android:clickable="true"
+    android:id="@+id/rv_event_dv"
+    android:background="#0000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:elevation="10dp"
+        android:layout_marginTop="70dp"
+
+        android:background="@drawable/event_dv_background"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_dv_close"
+                android:clickable="true"
+                android:text="Close"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginRight="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Donation-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="5dp"
+                        android:text="Do you require Donation ? "
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="#444"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+<!--Radio Buttons for donation requirement-->
+                    <LinearLayout
+                        android:paddingStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioGroup
+                            android:id="@+id/rg_donation"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_donation_yes"
+                                android:paddingLeft="10dp"
+                                android:text="Yes"
+                                android:layout_marginRight="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+
+                            <RadioButton
+                                android:id="@+id/rb_donation_no"
+                                android:paddingLeft="10dp"
+                                android:text="No"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+<!--Outer layout for donation submenu-->
+                    <LinearLayout
+                        android:id="@+id/ll_donation_submenu"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/event_dv_submenu_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:paddingBottom="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingStart="10dp"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/err_donation_type_ae"
+                                android:text="*Required"
+                                android:textSize="@dimen/ngo_profile_title"
+                                android:textStyle="normal"
+                                android:textColor="#f00"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+<!--Select Donation Type -->
+                            <LinearLayout
+                                android:weightSum="3"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <TextView
+                                    android:layout_weight="2"
+                                    android:gravity="center_vertical"
+                                    android:text="Donation type"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/ngo_event_submenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                </TextView>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_select_donationtype"
+                                    android:weightSum="10"
+                                    android:layout_marginTop="5dp"
+                                    android:clickable="true"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/tv_donation_type_ae"
+                                        android:layout_weight="3"
+                                        android:text="--- Select Donation Type ---"
+                                        android:gravity="center"
+                                        android:paddingStart="10dp"
+                                        android:textSize="@dimen/ngo_profile_text"
+                                        android:textColor="#333"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                    </TextView>
+                                    <LinearLayout
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_weight="7"
+                                        android:gravity="left"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:scaleType="fitXY"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_drop_arrow"
+                                            android:layout_width="13dp"
+                                            android:layout_height="20dp"></ImageView>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+<!--Specify Others-->
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/ll_specify_donation_type"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:id="@+id/err_specify_others_ae"
+                                    android:text="*Required"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="normal"
+                                    android:textColor="#f00"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                </TextView>
+                                <TextView
+                                    android:text="Specify Others"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/ngo_event_submenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+                                <EditText
+                                    android:id="@+id/et_specify_others_ae"
+                                    android:paddingStart="10dp"
+                                    android:textSize="@dimen/ngo_profile_text"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="2dp"
+                                    android:hint="Eg. : Furniture, Cereals, Etc"
+                                    android:background="@android:color/transparent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:imeOptions="actionDone">
+
+                                </EditText>
+
+
+                            </LinearLayout>
+
+<!--Donation Goal-->
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/ll_specify_donation_goal"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:id="@+id/err_donation_goal_ae"
+                                    android:text="*Required"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="normal"
+                                    android:textColor="#f00"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                </TextView>
+                                <TextView
+                                    android:text="Donation Goal"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/ngo_event_submenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:paddingStart="10dp"
+                                        android:textSize="@dimen/ngo_profile_text"
+                                        android:textColor="#000"
+                                        android:layout_marginTop="2dp"
+                                        android:text="Rs."
+                                        android:background="@android:color/transparent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                    </TextView>
+
+                                    <EditText
+                                        android:id="@+id/et_donation_goal_ae"
+                                        android:paddingStart="10dp"
+                                        android:textSize="@dimen/ngo_profile_text"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="2dp"
+                                        android:hint="Eg. : 50,000"
+                                        android:inputType="number"
+                                        android:background="@android:color/transparent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:imeOptions="actionDone">
+
+                                    </EditText>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!--Volunteers-->
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="5dp"
+                        android:text="Do you require Volunteers ? "
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="#444"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:paddingStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioGroup
+                            android:id="@+id/rg_volunteers"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_volunteers_yes"
+                                android:paddingLeft="10dp"
+                                android:text="Yes"
+                                android:layout_marginRight="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+
+                            <RadioButton
+                                android:id="@+id/rb_volunteers_no"
+                                android:paddingLeft="10dp"
+                                android:text="No"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </RadioButton>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_volunteers_submenu"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/event_dv_submenu_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:paddingStart="10dp"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:visibility="gone"
+                                    android:id="@+id/err_volunteers_goal_ae"
+                                    android:text="*Required"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="normal"
+                                    android:textColor="#f00"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                </TextView>
+                                <TextView
+                                    android:text="Total Number of Volunteers Required ?"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/ngo_event_submenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+                                <EditText
+                                    android:id="@+id/et_volunteers_goal_ae"
+                                    android:paddingStart="10dp"
+                                    android:textSize="@dimen/ngo_profile_text"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="2dp"
+                                    android:hint="Eg. : 100"
+                                    android:inputType="number"
+                                    android:background="@android:color/transparent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:imeOptions="actionNext"
+                                    android:nextFocusDown="@id/et_volunteers_qualification_ae">
+
+                                </EditText>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:text="Qualification Required for Volunteers ? (Optional)"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/ngo_event_submenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/et_volunteers_qualification_ae"
+                                    android:paddingStart="10dp"
+                                    android:textSize="@dimen/ngo_profile_text"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="2dp"
+                                    android:hint="Eg. : 12th pass, MBBS for medical camps, etc."
+                                    android:inputType="textMultiLine"
+                                    android:gravity="left"
+                                    android:maxLines="3"
+                                    android:minLines="2"
+                                    android:background="@android:color/transparent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:imeOptions="actionDone">
+
+                                </EditText>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:text="Description of the work Volunteers will do. (Optional)"
+                                    android:textSize="@dimen/ngo_profile_title"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/ngo_event_submenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+
+                                <EditText
+                                    android:id="@+id/et_volunteers_description_ae"
+                                    android:paddingStart="10dp"
+                                    android:textSize="@dimen/ngo_profile_text"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="2dp"
+                                    android:hint="Eg. : Teach children of class 5 english, maths and hindi. Timings : 5:00pm to 7:00pm."
+                                    android:inputType="textMultiLine"
+                                    android:gravity="left"
+                                    android:maxLines="3"
+                                    android:minLines="2"
+                                    android:background="@android:color/transparent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:imeOptions="actionDone">
+
+                                </EditText>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!--Submit-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_dv_done_ae"
+                        android:text="Done"
+                        android:clickable="true"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:background="@drawable/submit_button_back"
+                        android:textColor="#fff"
+                        android:layout_width="224dp"
+                        android:layout_height="44dp"></TextView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

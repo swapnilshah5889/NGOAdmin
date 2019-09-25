@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="home_donate">12dp</dimen>
+    <dimen name="ngo_profile_title">14dp</dimen>
+    <dimen name="ngo_profile_text">15dp</dimen>
+
+</resources>

@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rv_add_event_main"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".Activities.ngo_add_event">
+
+
+    <LinearLayout
+        android:id="@+id/ll_toolbar_addevent"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_backarrow"
+            android:layout_width="20dp"
+            android:tint="#666"
+            android:layout_height="20dp"></ImageView>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/sv_main_add_event"
+        android:nestedScrollingEnabled="true"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Main Outer Linear Layout-->
+        <LinearLayout
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <!--Extra Space-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"></LinearLayout>
+
+
+            <!--Select Event Type-->
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:text="Event Category"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/ngo_profile_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/err_event_type_ae"
+                        android:paddingStart="15dp"
+                        android:text="*Required"
+                        android:visibility="invisible"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="normal"
+                        android:textColor="#f00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_select_eventtype"
+                    android:weightSum="10"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_event_category_ae"
+                        android:layout_weight="3"
+                        android:text="--- Select Event Category ---"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:textSize="@dimen/ngo_profile_text"
+                        android:textColor="#333"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="7"
+                        android:gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_drop_arrow"
+                            android:layout_width="13dp"
+                            android:layout_height="20dp"></ImageView>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Event Title-->
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:text="Title"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/ngo_profile_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/err_title_ae"
+                        android:paddingStart="15dp"
+                        android:text="*Required"
+                        android:visibility="invisible"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="normal"
+                        android:textColor="#f00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_title_ae"
+                    android:lines="1"
+                    android:text="Title Test"
+                    android:imeOptions="actionDone"
+                    android:paddingStart="10dp"
+                    android:inputType="text"
+                    android:textSize="@dimen/ngo_profile_text"
+                    android:textColor="#000"
+                    android:layout_marginTop="2dp"
+                    android:hint="Eg. : 10,000 Tree Plantation"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+
+
+            </LinearLayout>
+
+            <!--Select Date-->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:text="Date"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/ngo_profile_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/err_date_ae"
+                        android:paddingStart="15dp"
+                        android:visibility="invisible"
+                        android:text="*Please Select the Dates"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="normal"
+                        android:textColor="#f00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_from_date"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7"
+                            android:text="From : "
+                            android:textSize="@dimen/ngo_profile_text"
+                            android:textColor="#000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></TextView>
+                        <TextView
+                            android:id="@+id/tv_from_date_ae"
+                            android:layout_weight="3"
+                            android:paddingStart="10dp"
+                            android:textSize="@dimen/ngo_profile_text"
+                            android:textColor="#000"
+                            android:layout_marginTop="2dp"
+                            android:text="28 August 2019"
+                            android:background="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_weight="9"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:scaleType="center"
+                            android:background="@drawable/ic_event_calender"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"></ImageView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_to_date"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7"
+                            android:text="To : "
+                            android:textSize="@dimen/ngo_profile_text"
+                            android:textColor="#000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></TextView>
+                        <TextView
+                            android:id="@+id/tv_to_date_ae"
+                            android:layout_weight="3"
+                            android:paddingStart="10dp"
+                            android:textSize="@dimen/ngo_profile_text"
+                            android:textColor="#000"
+                            android:layout_marginTop="2dp"
+                            android:text="28 August 2019"
+                            android:background="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_weight="9"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:scaleType="center"
+                            android:background="@drawable/ic_event_calender"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"></ImageView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Select Time-->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:text="Time"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/ngo_profile_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/err_time_ae"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="15dp"
+                        android:text="*Please Select Timings of the Event"
+                        android:textColor="#f00"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="normal"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_from_time"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7"
+                            android:text="From : "
+                            android:textSize="@dimen/ngo_profile_text"
+                            android:textColor="#000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></TextView>
+                        <TextView
+                            android:id="@+id/tv_from_time_ae"
+                            android:layout_weight="3"
+                            android:paddingStart="10dp"
+                            android:textSize="@dimen/ngo_profile_text"
+                            android:textColor="#000"
+                            android:layout_marginTop="2dp"
+                            android:text="10:00 AM"
+                            android:background="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_weight="9"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:background="@drawable/ic_event_time"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"></ImageView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_to_time"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7"
+                            android:text="To : "
+                            android:textSize="@dimen/ngo_profile_text"
+                            android:textColor="#000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></TextView>
+                        <TextView
+                            android:id="@+id/tv_to_time_ae"
+                            android:layout_weight="3"
+                            android:paddingStart="10dp"
+                            android:textSize="@dimen/ngo_profile_text"
+                            android:textColor="#000"
+                            android:layout_marginTop="2dp"
+                            android:text="5:00 PM"
+                            android:background="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_weight="9"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:background="@drawable/ic_event_time"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"></ImageView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Address-->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:text="Address"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/ngo_profile_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/err_address_ae"
+                        android:paddingStart="15dp"
+                        android:visibility="invisible"
+                        android:text="*Required"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="normal"
+                        android:textColor="#f00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_address_ae"
+                    android:paddingStart="10dp"
+                    android:textSize="@dimen/ngo_profile_text"
+                    android:gravity="top"
+                    android:text="Address Test"
+                    android:textColor="#000"
+                    android:layout_marginTop="2dp"
+                    android:hint="Eg. :  A-41 B-Block, Galaxy Appartments, Prahladnagar"
+                    android:background="@android:color/transparent"
+                    android:minLines="2"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+
+            </LinearLayout>
+
+            <!--                &lt;!&ndash;GPS Location&ndash;&gt;-->
+            <!--                <LinearLayout-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content">-->
+
+            <!--                    <TextView-->
+            <!--                        android:layout_marginTop="20dp"-->
+            <!--                        android:paddingStart="5dp"-->
+            <!--                        android:text="Location"-->
+            <!--                        android:textSize="@dimen/ngo_profile_title"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        android:textColor="@color/ngo_profile_title"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content">-->
+
+            <!--                    </TextView>-->
+            <!--                    <LinearLayout-->
+            <!--                        android:orientation="horizontal"-->
+            <!--                        android:weightSum="10"-->
+            <!--                        android:layout_marginTop="3dp"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:paddingStart="10dp"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content">-->
+            <!--                        <TextView-->
+            <!--                            android:layout_weight="1"-->
+            <!--                            android:text="GPS Location.... "-->
+            <!--                            android:textSize="@dimen/ngo_profile_text"-->
+            <!--                            android:textColor="#000"-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="wrap_content"></TextView>-->
+
+            <!--                        <LinearLayout-->
+            <!--                            android:gravity="right"-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_weight="9"-->
+            <!--                            android:layout_height="wrap_content">-->
+            <!--                            <ImageView-->
+            <!--                                android:scaleType="center"-->
+            <!--                                android:background="@drawable/ic_event_gps"-->
+            <!--                                android:layout_width="20dp"-->
+            <!--                                android:layout_height="20dp"></ImageView>-->
+
+            <!--                        </LinearLayout>-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                </LinearLayout>-->
+
+            <!--Description-->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:text="Description"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/ngo_profile_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/err_description_ae"
+                        android:paddingStart="15dp"
+                        android:text="*Required"
+                        android:visibility="invisible"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="normal"
+                        android:textColor="#f00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_description_ae"
+                    android:scrollbars="vertical"
+                    android:isScrollContainer="true"
+                    android:focusable="true"
+                    android:text="Description Test"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="left"
+                    android:hint="Wrtie few lines about the event, it's cause and implementation etc..."
+                    android:inputType="textMultiLine"
+                    android:maxLines="15"
+                    android:minLines="3"
+                    android:paddingStart="10dp"
+                    android:textColor="#000"
+                    android:textSize="@dimen/ngo_profile_text">
+
+                </EditText>
+
+
+            </LinearLayout>
+
+            <!--Volunteer Donation -->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/ll_donation_volunteer"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:paddingStart="5dp"
+                    android:text="Additional Requirements"
+                    android:textSize="@dimen/ngo_profile_title"
+                    android:textStyle="bold"
+                    android:textColor="@color/ngo_profile_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/tv_donation_main_ae"
+                    android:paddingStart="10dp"
+                    android:textSize="@dimen/ngo_profile_text"
+                    android:textColor="#777"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"
+                    android:text="Donation : No"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/tv_volunteer_main_ae"
+                    android:paddingStart="10dp"
+                    android:textSize="@dimen/ngo_profile_text"
+                    android:textColor="#777"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"
+                    android:text="Volunteers : No"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+            </LinearLayout>
+
+            <!--Photos-->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+
+                        android:paddingStart="5dp"
+                        android:text="Photos "
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/ngo_profile_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/tv_photos_counter_ae"
+                        android:paddingStart="5dp"
+                        android:text="(0/10)"
+                        android:textSize="@dimen/ngo_profile_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/ngo_profile_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <LinearLayout
+                        android:gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/ll_add_photo"
+                            android:background="@drawable/submit_button_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_add_photo_ae"
+                                android:text="Add Photo"
+                                android:clickable="true"
+                                android:textStyle="bold"
+                                android:textSize="12dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColor="#fff"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            </TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recycler_images_ae"
+                        android:divider="@null"
+                        app:reverseLayout="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Terms and Conditions-->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_terms_ae"
+                    android:layout_width="wrap_content"
+                    android:checked="false"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ngo_profile_title"
+                    android:text="I assure that all details are correct"/>
+            </LinearLayout>
+
+            <!--Submit-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_submit_ae"
+                    android:clickable="true"
+                    android:text="Submit"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@drawable/submit_button_back"
+                    android:textColor="#fff"
+                    android:layout_width="224dp"
+                    android:layout_height="44dp"></TextView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title_addevent"
+        android:paddingTop="30dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/event_background"
+            android:gravity="center"
+            android:elevation="10dp"
+            android:layout_margin="15dp"
+            android:layout_width="300dp"
+            android:layout_height="38dp">
+
+            <TextView
+                android:gravity="center"
+                android:text="Add Event"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#F7941E"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <include layout="@layout/transparent_dark"
+        android:visibility="gone"></include>
+
+    <include layout="@layout/event_donate_volunteer"
+        android:visibility="gone"></include>
+
+    <include layout="@layout/progress_dialog"
+        android:visibility="gone"></include>
+
+</RelativeLayout>

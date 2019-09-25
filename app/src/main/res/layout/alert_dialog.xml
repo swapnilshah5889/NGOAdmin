@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_alert_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/ab_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="10dp"
+            android:text="Title"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ab_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Are you sure you want to delete the photo ?"
+            android:textColor="#b000"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center">
+
+            <Button
+                android:id="@+id/ab_btn_no"
+                android:layout_width="48dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="NO"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/ab_btn_yes"
+                android:layout_width="48dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="YES"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

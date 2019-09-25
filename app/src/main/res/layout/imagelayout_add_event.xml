@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="188dp"
+    android:id="@+id/cl_event_photos"
+    android:layout_height="130dp">
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:background="#000"
+            android:id="@+id/img_event_add"
+            android:src="@drawable/img_ngo"
+            android:scaleType="fitCenter"
+            android:layout_width="178dp"
+            android:layout_height="110dp">
+        </ImageView>
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_delete_img"
+        android:layout_width="match_parent"
+        android:layout_gravity="right"
+        android:backgroundTint="@color/colorPrimary"
+        app:fabCustomSize="20dp"
+        app:borderWidth="0dp"
+        app:maxImageSize="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:rippleColor="#fff"
+        android:src="@drawable/ic_cross"
+        android:tint="@color/black"
+        android:layout_height="wrap_content">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

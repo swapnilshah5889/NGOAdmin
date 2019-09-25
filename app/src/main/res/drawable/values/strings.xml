@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">NGO Admin</string>
+
+
+    <string name="eventtype_prompt">Choose Event Type</string>
+    <string-array name="eventtype_array">
+        <item>Upcoming Event</item>
+        <item>Accomplished Event</item>
+        <item>Acheivement</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="donationtype_array">
+        <item>Money</item>
+        <item>Food</item>
+        <item>Clothes</item>
+        <item>Others</item>
+    </string-array>
+</resources>

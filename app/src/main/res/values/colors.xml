@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF8900</color>
+    <color name="colorPrimaryDark">#FF8900</color>
+    <color name="colorAccent">#FF8900</color>
+    <color name="colorAccentDark">#D66F01</color>
+    <color name="eventtext">#000</color>
+    <color name="homemenudonate">#343434</color>
+    <color name="home_title">#818193</color>
+    <color name="settings">#707070</color>
+
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="ngo_profile_title">#999</color>
+    <color name="ngo_event_submenu">#777</color>
+</resources>
